@@ -1,0 +1,7 @@
+{
+  "name": "LaCortecciaDelFaggio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
