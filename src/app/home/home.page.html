@@ -1,23 +1,40 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-grid>
-      <ion-row>
-
-        <ion-col>
-          <ion-text>
-            Home
-          </ion-text>
-
-          <ion-text style="padding-left: 2%;">
-            Dove siamo
-          </ion-text>
-        </ion-col>
-
-      </ion-row>
-    </ion-grid>
-  </ion-toolbar>
-</ion-header>
-
+<!-- <ion-content [fullscreen]="true" > -->
 <ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="section1">
+      <ion-col size="12">
 
+        <ion-grid>
+          <ion-row style="height:13%;">
+            <ion-col *ngFor="let page of pages" class="center">
+              <ion-img *ngIf="page.name=='Logo'" [src]="page.image" style="height:100%; fill:white"> </ion-img>
+
+              <ion-text *ngIf="page.name!='Logo'" color="light">
+                {{ page.name }}
+              </ion-text>
+            </ion-col>
+
+          </ion-row>
+
+          <ion-row style="height:87%;">
+            <ion-col size="12" class="center">
+              <ion-text class="title">
+                La Corteccia del Faggio
+              </ion-text>
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="section2">
+
+    </ion-row>
+
+    <ion-row class="section3">
+
+    </ion-row>
+  </ion-grid>
 </ion-content>
