@@ -82,6 +82,22 @@
   --ion-color-orange-contrast-rgb: 0, 0, 0;
   --ion-color-orange-shade: #c26402;
   --ion-color-orange-tint: #e0801b;
+
+  //colore arancione chiaro homemade
+  --ion-color-orange-light: #FFB258;
+  --ion-color-orange-light-rgb: 255, 178, 88;
+  --ion-color-orange-light-contrast: #000000;
+  --ion-color-orange-light-contrast-rgb: 0, 0, 0;
+  --ion-color-orange-light-shade: #e09d4d;
+  --ion-color-orange-light-tint: #ffba69;
+
+  //colore verde scuro homemade
+  --ion-color-green-dark: #59824B;
+  --ion-color-green-dark-rgb: 89, 130, 75;
+  --ion-color-green-dark-contrast: #ffffff;
+  --ion-color-green-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-green-dark-shade: #4e7242;
+  --ion-color-green-dark-tint: #6a8f5d;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,4 +1,3 @@
-<!-- <ion-content [fullscreen]="true" > -->
 <ion-content [fullscreen]="true">
   <ion-grid>
     <ion-row class="section1">
@@ -9,7 +8,7 @@
             <ion-col *ngFor="let page of pages" class="center">
               <ion-img *ngIf="page.name=='Logo'" [src]="page.image" style="height:100%; fill:white"> </ion-img>
 
-              <ion-text *ngIf="page.name!='Logo'" color="light">
+              <ion-text *ngIf="page.name!='Logo'" color="light" (click)="scrollTo('section2')">
                 {{ page.name }}
               </ion-text>
             </ion-col>
@@ -18,7 +17,7 @@
 
           <ion-row style="height:87%;">
             <ion-col size="12" class="center">
-              <ion-text class="title">
+              <ion-text id="title1">
                 La Corteccia del Faggio
               </ion-text>
             </ion-col>
@@ -29,12 +28,116 @@
       </ion-col>
     </ion-row>
 
-    <ion-row class="section2">
+    <ion-row class="section2" id="section2">
+      <ion-col size="1"> </ion-col>
+
+      <ion-col size="10">
+
+        <ion-grid class="ion-align-items-center">
+          <ion-row style="height: 15%;"> </ion-row>
+          <ion-row style="height: 70%;">
+            <ion-col size="6" id="foto-section2"></ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="5">
+
+              <ion-grid>
+                <ion-row style="height: 15%;">
+                  <ion-col size="12">
+                    <ion-text id="title2">Lorem Ipsum</ion-text>
+
+                    <br>
+                    <br>
+
+                    <ion-text id="text2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      Excepteur sint occaecat cupidatat non proident
+                    </ion-text>
+
+                    <br>
+                    <br>
+
+                    <ion-button (click)="onClick()" fill="outline" shape="round" color="green-dark" style="margin: 0;">
+                      Prenota ora!
+                    </ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+
+
+
+            </ion-col>
+          </ion-row>
+          <ion-row style="height: 15%;"> </ion-row>
+
+        </ion-grid>
+
+      </ion-col>
+
+      <ion-col size="1"> </ion-col>
 
     </ion-row>
 
     <ion-row class="section3">
+      <ion-col size="1"> </ion-col>
+
+      <ion-col size="10">
+
+        <ion-grid class="ion-align-items-center">
+          <ion-row style="height: 15%;"> </ion-row>
+          <ion-row style="height: 70%;">
+
+
+            <ion-col size="5">
+
+              <ion-grid>
+                <ion-row style="height: 15%;">
+                  <ion-col size="12">
+                    <ion-text id="title3">Lorem Ipsum</ion-text>
+
+                    <br>
+                    <br>
+
+                    <ion-text id="text3">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      <br><br>
+                      Excepteur sint occaecat cupidatat non proident laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor
+                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      Excepteur sint occaecat cupidatat non proident
+                    </ion-text>
+                    <br>
+                    <br>
+
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+
+
+
+            </ion-col>
+
+            <ion-col size="1"></ion-col>
+
+            <ion-col size="6" id="foto-section3"></ion-col>
+          </ion-row>
+          <ion-row style="height: 15%;"> </ion-row>
+
+        </ion-grid>
+
+      </ion-col>
+
+      <ion-col size="1"> </ion-col>
 
     </ion-row>
+
+
   </ion-grid>
 </ion-content>

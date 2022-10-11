@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { IonContent } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  @ViewChild(IonContent) content: IonContent;
 
   pages = [
     {
@@ -36,4 +39,8 @@ export class HomePage {
 
   constructor() { }
 
+  scrollTo(elementId: string) {
+    let y = document.getElementById(elementId).offsetTop;
+    this.content.scrollToPoint(0, y, 1000);
+  }
 }
