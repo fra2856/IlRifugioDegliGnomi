@@ -11,6 +11,8 @@ export class HomePage {
   @ViewChild(IonContent) content: IonContent;
   @ViewChild("parallax", { read: ElementRef }) image: ElementRef;
 
+  public moveImage: number = 0;
+
   pages = [
     {
       name: "Logo",
@@ -52,17 +54,17 @@ export class HomePage {
   }
 
   onScroll($event) {
-    let moveImage = 0;
     let scrollTop = $event.detail.scrollTop;
 
-    this.domCtrl.write(() => {
-      if (scrollTop > 0) {
-        moveImage = scrollTop / 2;
-      }
-      console.log("scroll", scrollTop, moveImage, this.image);
+    // this.domCtrl.write(() => {
+    if (scrollTop > 0) {
+      this.moveImage = scrollTop / 2;
+    }
+    // console.log("scroll", scrollTop, moveImage, this.image.nativeElement);
+    // console.log(this.moveImage);
 
 
-      this.render.setStyle(this.image.nativeElement, 'webkitTransform', 'translate3d(0' + moveImage + 'px, 0')
-    })
+    // this.render.setStyle(this.image.nativeElement, 'transform', `translateY(${this.moveImage}px)`)
+    // })
   }
 }

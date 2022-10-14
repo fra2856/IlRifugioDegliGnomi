@@ -1,7 +1,9 @@
 <ion-content [fullscreen]="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
-  <ion-grid>
+  <div #parallax class="parallax-image" [style.transform]="'translateY('+moveImage+'px)'"></div>
+
+  <ion-grid style="position: relative;">
     <ion-row id="section1">
-      <ion-col size="12" #parallax class="parallax-image">
+      <ion-col size="12">
         <ion-grid>
           <ion-row style="height:13%;">
             <ion-col *ngFor="let page of pages" class="center">
@@ -139,4 +141,5 @@
 
 
   </ion-grid>
+
 </ion-content>
