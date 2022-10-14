@@ -1,14 +1,13 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
   <ion-grid>
-    <ion-row class="section1">
-      <ion-col size="12">
-
+    <ion-row id="section1">
+      <ion-col size="12" #parallax class="parallax-image">
         <ion-grid>
           <ion-row style="height:13%;">
             <ion-col *ngFor="let page of pages" class="center">
               <ion-img *ngIf="page.name=='Logo'" [src]="page.image" style="height:100%; fill:white"> </ion-img>
 
-              <ion-text *ngIf="page.name!='Logo'" color="light" (click)="scrollTo('section2')">
+              <ion-text *ngIf="page.name!='Logo'" class="navbar" (click)="scrollTo(page.element)">
                 {{ page.name }}
               </ion-text>
             </ion-col>
@@ -28,7 +27,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row class="section2" id="section2">
+    <ion-row id="section2">
       <ion-col size="1"> </ion-col>
 
       <ion-col size="10">
@@ -81,7 +80,7 @@
 
     </ion-row>
 
-    <ion-row class="section3">
+    <ion-row id="section3">
       <ion-col size="1"> </ion-col>
 
       <ion-col size="10">
