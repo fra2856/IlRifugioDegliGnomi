@@ -1,0 +1,17 @@
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar {
+    color: var(--ion-color-light);
+    font-size: 150%;
+    font-family: "Quando";
+    text-transform: none;
+}
+
+ion-toolbar {
+    --background: transparent;
+}

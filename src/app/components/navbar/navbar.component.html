@@ -1,0 +1,18 @@
+<ion-header [style.opacity]="opacity" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons class="ion-justify-content-evenly">
+
+      <ion-img src="/assets/icon/logo-white.svg" style=" height: 80px; fill:white">
+      </ion-img>
+      <ion-button *ngFor="let page of pages" class="center">
+
+
+        <ion-text class="navbar" (click)="goTo(page.action())">
+          {{ page.name }}
+        </ion-text>
+
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>

@@ -1,0 +1,132 @@
+<!-- <div #parallax class="parallax-image" [style.transform]="'translateY('+moveImage+'px)'"></div> -->
+<app-navbar [opacity]="opacityVal"></app-navbar>
+
+<ion-content [fullscreen]="true" class="image" [scrollEvents]="true" (ionScroll)="onScroll($event)">
+
+
+  <ion-grid>
+    <ion-row id="section1">
+      <ion-col size="12" class="center">
+
+        <ion-text id="title1">
+          La Corteccia del Faggio
+        </ion-text>
+
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row id="section2">
+      <ion-col size="1"> </ion-col>
+
+      <ion-col size="10">
+
+        <ion-grid class="ion-align-items-center">
+          <ion-row style="height: 15%;"> </ion-row>
+          <ion-row style="height: 70%;">
+            <ion-col size="6" id="foto-section2"></ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="5">
+
+              <ion-grid>
+                <ion-row style="height: 15%;">
+                  <ion-col size="12">
+                    <ion-text id="title2">Lorem Ipsum</ion-text>
+
+                    <br>
+                    <br>
+
+                    <ion-text id="text2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      Excepteur sint occaecat cupidatat non proident
+                    </ion-text>
+
+                    <br>
+                    <br>
+
+                    <ion-button (click)="onClick()" fill="outline" shape="round" color="green-dark" style="margin: 0;">
+                      Prenota ora!
+                    </ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+
+
+
+            </ion-col>
+          </ion-row>
+          <ion-row style="height: 15%;"> </ion-row>
+
+        </ion-grid>
+
+      </ion-col>
+
+      <ion-col size="1"> </ion-col>
+
+    </ion-row>
+
+    <ion-row id="section3">
+      <ion-col size="1"> </ion-col>
+
+      <ion-col size="10">
+
+        <ion-grid class="ion-align-items-center">
+          <ion-row style="height: 15%;"> </ion-row>
+          <ion-row style="height: 70%;">
+
+
+            <ion-col size="5">
+
+              <ion-grid>
+                <ion-row style="height: 15%;">
+                  <ion-col size="12">
+                    <ion-text id="title3">Lorem Ipsum</ion-text>
+
+                    <br>
+                    <br>
+
+                    <ion-text id="text3">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      <br><br>
+                      Excepteur sint occaecat cupidatat non proident laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor
+                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      Excepteur sint occaecat cupidatat non proident
+                    </ion-text>
+                    <br>
+                    <br>
+
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+
+
+
+            </ion-col>
+
+            <ion-col size="1"></ion-col>
+
+            <ion-col size="6" id="foto-section3"></ion-col>
+          </ion-row>
+          <ion-row style="height: 15%;"> </ion-row>
+
+        </ion-grid>
+
+      </ion-col>
+
+      <ion-col size="1"> </ion-col>
+
+    </ion-row>
+
+
+  </ion-grid>
+
+</ion-content>
