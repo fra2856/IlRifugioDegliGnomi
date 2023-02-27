@@ -1,11 +1,11 @@
 <!-- <div #parallax class="parallax-image" [style.transform]="'translateY('+moveImage+'px)'"></div> -->
-<app-navbar [opacity]="opacityVal"></app-navbar>
 
-<ion-content [fullscreen]="true" class="image" [scrollEvents]="true" (ionScroll)="onScroll($event)">
+<ion-content #content [fullscreen]="true" class="image" [scrollEvents]="true" (ionScroll)="onScroll($event)">
 
+  <app-navbar [opacity]="opacityVal" [content]="content"></app-navbar>
 
   <ion-grid>
-    <ion-row id="section1">
+    <ion-row id="home">
       <ion-col size="12" class="center">
 
         <ion-text id="title1">
@@ -16,7 +16,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row id="section2">
+    <ion-row id="where">
       <ion-col size="1"> </ion-col>
 
       <ion-col size="10">
@@ -24,7 +24,7 @@
         <ion-grid class="ion-align-items-center">
           <ion-row style="height: 15%;"> </ion-row>
           <ion-row style="height: 70%;">
-            <ion-col size="6" id="foto-section2"></ion-col>
+            <ion-col size="6" id="foto-where"></ion-col>
             <ion-col size="1"></ion-col>
             <ion-col size="5">
 
@@ -69,7 +69,7 @@
 
     </ion-row>
 
-    <ion-row id="section3">
+    <ion-row id="services">
       <ion-col size="1"> </ion-col>
 
       <ion-col size="10">
@@ -114,7 +114,7 @@
 
             <ion-col size="1"></ion-col>
 
-            <ion-col size="6" id="foto-section3"></ion-col>
+            <ion-col size="6" id="foto-services"></ion-col>
           </ion-row>
           <ion-row style="height: 15%;"> </ion-row>
 
