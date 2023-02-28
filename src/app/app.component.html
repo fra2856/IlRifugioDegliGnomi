@@ -1,14 +1,18 @@
 <ion-app>
-  <!-- <ion-menu *ngIf="!platform.is('desktop')" contentId="content" side="start" type="overlay">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Awesome avocado menu</ion-title>
-      </ion-toolbar>
+  <ion-menu *ngIf="!platform.is('desktop')" contentId="content" side="start" type="overlay">
+    <ion-header class="ion-no-border">
+      <ion-img src="/assets/icon/logo-black.svg" style=" height: 80px;">
+      </ion-img>
     </ion-header>
     <ion-content>
-      Awesome avocado content
+      <ion-list [inset]="true">
+        <ion-item *ngFor="let page of pages" (click)="page.action()">
+          <ion-label> {{ page.name }} </ion-label>
+        </ion-item>
+
+      </ion-list>
     </ion-content>
-  </ion-menu> -->
+  </ion-menu>
 
   <ion-router-outlet id="content"></ion-router-outlet>
 </ion-app>

@@ -1,7 +1,12 @@
 <ion-header [style.opacity]="opacity" mode="ios" class="ion-no-border">
-  <ion-toolbar *ngIf="platform.is('desktop')">
+  <ion-toolbar>
+    <ion-buttons *ngIf="!platform.is('desktop')" slot="start">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-buttons>
 
-    <ion-grid>
+    <ion-grid *ngIf="platform.is('desktop')">
       <ion-row class="center">
 
         <ion-col>
