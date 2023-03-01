@@ -49,6 +49,11 @@ export class NavbarComponent {
     },
   ]
 
+
+  hello() {
+    console.log("hello");
+  }
+
   goTo(route: string) {
     console.log(route);
     this.router.navigate([route]);

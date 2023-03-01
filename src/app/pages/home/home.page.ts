@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomePage {
 
   public opacityVal: number = 1;
 
-  constructor() { }
+  constructor(public platform: Platform) { }
 
   onScroll($event) {
     let scrollTop = $event.detail.scrollTop;
