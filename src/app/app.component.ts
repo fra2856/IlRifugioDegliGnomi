@@ -10,7 +10,7 @@ import { IonContent, MenuController, Platform } from '@ionic/angular';
 export class AppComponent {
   constructor(public platform: Platform, private router: Router, private menuController: MenuController) { }
 
-  @ViewChild(IonContent, { static: false }) content: IonContent
+  @ViewChild('mainContent', { static: false }) content: IonContent
 
   pages = [
     {
@@ -51,9 +51,12 @@ export class AppComponent {
 
   scrollTo(elementId: string) {
     let y = document.getElementById(elementId).offsetTop;
+    let content = document.getElementById('mainContent')
     this.menuController.close();
-    this.content.scrollToPoint(0, y, 1000);
-    console.log(y, this.content);
+
+    console.log(y, content);
+
+    // content.scrollToPoint(0, y, 1000);
 
   }
 }
