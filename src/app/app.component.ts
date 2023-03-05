@@ -1,6 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ContentChildren, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonContent, MenuController, Platform } from '@ionic/angular';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
@@ -8,55 +9,10 @@ import { IonContent, MenuController, Platform } from '@ionic/angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(public platform: Platform, private router: Router, private menuController: MenuController) { }
+  constructor(
+    public platform: Platform,
+  ) { }
 
-  @ViewChild('mainContent', { static: false }) content: IonContent
 
-  pages = [
-    {
-      name: "Home",
-      color: "light",
-      action: () => this.scrollTo("home"),
-    },
-    {
-      name: "Dove siamo",
-      color: "light",
-      action: () => this.scrollTo("where"),
 
-    },
-    {
-      name: "Servizi",
-      color: "light",
-      action: () => this.scrollTo("services"),
-
-    },
-    {
-      name: "Camere",
-      color: "light",
-      action: () => this.goTo("/rooms"),
-
-    },
-    {
-      name: "Prenotazioni",
-      color: "light",
-      action: () => this.goTo("/reservations"),
-
-    },
-  ]
-
-  goTo(route: string) {
-    console.log(route);
-    this.router.navigate([route]);
-  }
-
-  scrollTo(elementId: string) {
-    let y = document.getElementById(elementId).offsetTop;
-    let content = document.getElementById('mainContent')
-    this.menuController.close();
-
-    console.log(y, content);
-
-    // content.scrollToPoint(0, y, 1000);
-
-  }
 }

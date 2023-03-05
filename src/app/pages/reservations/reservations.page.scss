@@ -1,0 +1,124 @@
+ion-grid {
+    padding: 0;
+    height: 100%;
+}
+
+ion-row {
+    // border: 1px solid green;
+}
+
+ion-col {
+    // border: 1px solid blue;
+    padding: 0;
+    height: 100%;
+}
+
+
+/*----------------------------------------------------------------
+    SECTION 1
+----------------------------------------------------------------*/
+
+#home {
+    height: 100%;
+
+    // background: url(/assets/images/autunno-finale.jpg);
+    // background-size: cover;
+}
+
+.image {
+    --background: url(/assets/images/autunno-finale.jpg) 0 0/100% 100% no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+.parallax-image {
+    position: absolute;
+    border: 2px solid red;
+    --background: url(/assets/images/autunno-finale.jpg);
+    background: url(/assets/images/autunno-finale.jpg);
+    height: 100%;
+    width: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // overflow: hidden;
+    // transform: translateY(100px);
+}
+
+#title1 {
+    font-family: 'Rock Salt';
+    font-weight: 400;
+    font-size: 7vw;
+    color: var(--ion-color-light);
+}
+
+/*----------------------------------------------------------------
+    SECTION 2
+----------------------------------------------------------------*/
+
+#where {
+    height: 100%;
+    background-color: var(--ion-color-light);
+}
+
+#foto-where {
+    height: 100%;
+    background: url(/assets/images/inverno.jpg);
+    background-size: cover;
+}
+
+#title2 {
+    font-family: 'Quando';
+    font-weight: 300;
+    font-size: 200%;
+
+    color: var(--ion-color-orange);
+}
+
+#text2 {
+    font-family: 'Quando';
+    font-size: 80%;
+
+    color: var(--ion-color-orange-light);
+}
+
+/*----------------------------------------------------------------
+    SECTION 3
+----------------------------------------------------------------*/
+
+#services {
+    height: 100%;
+    background-color: var(--ion-color-orange);
+}
+
+#foto-services {
+    height: 100%;
+    background: url(/assets/images/croce.jpg);
+    background-size: cover;
+}
+
+#title3 {
+    font-family: 'Quando';
+    font-weight: 300;
+    font-size: 200%;
+
+
+    color: var(--ion-color-light);
+}
+
+#text3 {
+    font-family: 'Quando';
+    font-size: 80%;
+
+    color: var(--ion-color-light);
+}
+
+// ion-content ion-header {
+//     position: initial;
+//     --background: transparent;
+//     background: transparent;
+// }

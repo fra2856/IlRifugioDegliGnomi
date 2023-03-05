@@ -1,35 +1,25 @@
-<ion-content [fullscreen]="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
-  <div #parallax class="parallax-image" [style.transform]="'translateY('+moveImage+'px)'"></div>
+<!-- <div #parallax class="parallax-image" [style.transform]="'translateY('+moveImage+'px)'"></div> -->
 
-  <ion-grid style="position: relative;">
-    <ion-row id="section1">
-      <ion-col size="12">
-        <ion-grid>
-          <ion-row style="height:13%;">
-            <ion-col *ngFor="let page of pages" class="center">
-              <ion-img *ngIf="page.name=='Logo'" [src]="page.image" style="height:100%; fill:white"> </ion-img>
 
-              <ion-text *ngIf="page.name!='Logo'" class="navbar" (click)="scrollTo(page.element)">
-                {{ page.name }}
-              </ion-text>
-            </ion-col>
+<app-navbar [opacity]="opacityVal"></app-navbar>
 
-          </ion-row>
 
-          <ion-row style="height:87%;">
-            <ion-col size="12" class="center">
-              <ion-text id="title1">
-                La Corteccia del Faggio
-              </ion-text>
-            </ion-col>
+<ion-content [fullscreen]="true" class="image" [scrollEvents]="true" (ionScroll)="onScroll($event)">
 
-          </ion-row>
-        </ion-grid>
+  <ion-grid>
+    <ion-row id="home">
+      <ion-col size="12" class="center">
+
+        <ion-text id="title1">
+          La Corteccia <br>
+          del Faggio
+        </ion-text>
+
 
       </ion-col>
     </ion-row>
 
-    <ion-row id="section2">
+    <ion-row id="where">
       <ion-col size="1"> </ion-col>
 
       <ion-col size="10">
@@ -37,7 +27,7 @@
         <ion-grid class="ion-align-items-center">
           <ion-row style="height: 15%;"> </ion-row>
           <ion-row style="height: 70%;">
-            <ion-col size="6" id="foto-section2"></ion-col>
+            <ion-col size="6" id="foto-where"></ion-col>
             <ion-col size="1"></ion-col>
             <ion-col size="5">
 
@@ -82,7 +72,7 @@
 
     </ion-row>
 
-    <ion-row id="section3">
+    <ion-row id="services">
       <ion-col size="1"> </ion-col>
 
       <ion-col size="10">
@@ -127,7 +117,7 @@
 
             <ion-col size="1"></ion-col>
 
-            <ion-col size="6" id="foto-section3"></ion-col>
+            <ion-col size="6" id="foto-services"></ion-col>
           </ion-row>
           <ion-row style="height: 15%;"> </ion-row>
 

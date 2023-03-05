@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { HomePage } from './home.page';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { ReservationsPageRoutingModule } from './reservations-routing.module';
 import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import { AppModule } from 'src/app/app.module';
+import { ReservationsPage } from './reservations.page';
 
 
 @NgModule({
   imports: [
     CommonModule,
     IonicModule,
-    HomePageRoutingModule,
+    ReservationsPageRoutingModule,
   ],
-  declarations: [HomePage, NavbarComponent]
+  declarations: [ReservationsPage, NavbarComponent]
 })
-export class HomePageModule { }
+export class ReservationsPageModule { }

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { IonContent, Platform } from '@ionic/angular';
+import { IonContent, MenuController, Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-navbar',
@@ -9,61 +9,44 @@ import { IonContent, Platform } from '@ionic/angular';
 })
 export class NavbarComponent {
 
-  // @ViewChild(IonContent) content: IonContent; 
-  @Input() content: IonContent
+  @ViewChild(IonContent) content: IonContent;
   @Input() opacity: number;
 
-  constructor(private router: Router, public platform: Platform) {
-    console.log(platform.platforms());
+  constructor(
+    private router: Router,
+    public platform: Platform,
+    private menuController: MenuController
+  ) {
   }
 
-  pages = [
+  public pages = [
     {
       name: "Home",
       color: "light",
-      action: () => this.scrollTo("home"),
-    },
-    {
-      name: "Dove siamo",
-      color: "light",
-      action: () => this.scrollTo("where"),
-
+      fill: "clear",
+      action: () => this.goTo("/home"),
     },
     {
       name: "Servizi",
       color: "light",
-      action: () => this.scrollTo("services"),
-
-    },
-    {
-      name: "Camere",
-      color: "light",
-      action: () => this.goTo("/rooms"),
+      fill: "clear",
+      action: () => this.goTo("/services"),
 
     },
     {
       name: "Prenotazioni",
       color: "light",
+      fill: "outline",
       action: () => this.goTo("/reservations"),
 
     },
   ]
 
 
-  hello() {
-    console.log("hello");
-  }
 
   goTo(route: string) {
     console.log(route);
     this.router.navigate([route]);
-  }
-
-  scrollTo(elementId: string) {
-    let y = document.getElementById(elementId).offsetTop;
-    this.content.scrollToPoint(0, y, 1000);
-    console.log(y, this.content);
-
   }
 
 }

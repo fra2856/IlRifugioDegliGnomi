@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { HomePage } from './home.page';
+import { ServicesPage } from './services.page';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { ServicesPageRoutingModule } from './services-routing.module';
 import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import { AppModule } from 'src/app/app.module';
 
@@ -12,8 +12,8 @@ import { AppModule } from 'src/app/app.module';
   imports: [
     CommonModule,
     IonicModule,
-    HomePageRoutingModule,
+    ServicesPageRoutingModule,
   ],
-  declarations: [HomePage, NavbarComponent]
+  declarations: [ServicesPage, NavbarComponent]
 })
-export class HomePageModule { }
+export class ServicesPageModule { }

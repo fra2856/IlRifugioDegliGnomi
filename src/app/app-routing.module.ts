@@ -7,9 +7,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
   {
-    path: 'camere',
-    loadChildren: () => import('./pages/camere/camere.module').then(m => m.CamerePageModule)
+    path: 'services',
+    loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesPageModule)
   },
+  {
+    path: 'reservations',
+    loadChildren: () => import('./pages/reservations/reservations.module').then(m => m.ReservationsPageModule)
+  },
+
   {
     path: '',
     redirectTo: 'home',
