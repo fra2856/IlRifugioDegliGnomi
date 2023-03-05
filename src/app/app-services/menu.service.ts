@@ -29,5 +29,5 @@ export class MenuService {
     },
   ]
 
-  constructor(private router: Router,) { }
+  constructor() { }
 }

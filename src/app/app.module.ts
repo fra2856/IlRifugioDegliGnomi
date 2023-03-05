@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
+import { RouteReuseStrategy, RouterModule } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
@@ -12,6 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    // RouterModule,
     IonicModule.forRoot({
       platform: {
         /** The default `desktop` function returns false for devices with a touchscreen.

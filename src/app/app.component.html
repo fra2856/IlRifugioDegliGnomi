@@ -1,13 +1,20 @@
 <ion-app>
-  <ion-menu *ngIf="!platform.is('desktop')" contentId="mainContent" side="start" type="overlay" (click)="log()">
+  <ion-menu *ngIf="!platform.is('desktop')" contentId="mainContent" side="start" type="overlay">
     <ion-header class="ion-no-border">
-      <ion-img src="/assets/icon/logo-black.svg" style=" height: 80px;">
-      </ion-img>
+      <div class="ion-text-center">
+        <img src="/assets/icon/logo-black.svg" class="logo">
+      </div>
+
     </ion-header>
     <ion-content>
-      <ion-list [inset]="true" *ngIf="navbar">
-        <ion-item *ngFor="let page of navbar.pages" button="true" detail="false" (click)="page.action()">
-          <ion-label> {{ page.name }} </ion-label>
+      <ion-list [inset]="true">
+        <ion-item *ngFor="let page of menu.pages" detail="false">
+
+          <ion-button [fill]="'clear'" [routerLink]="page.link" routerDirection="root" routerLinkActive="active-link"
+            class="link menuButton">
+            {{page.name}}
+          </ion-button>
+
         </ion-item>
 
       </ion-list>

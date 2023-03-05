@@ -1,7 +1,6 @@
-import { Component, ContentChildren, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-import { IonContent, MenuController, Platform } from '@ionic/angular';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
+import { MenuService } from './app-services/menu.service';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 export class AppComponent {
   constructor(
     public platform: Platform,
+    private menu: MenuService
   ) { }
-
-
 
 }
