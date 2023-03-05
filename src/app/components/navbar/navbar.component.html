@@ -43,8 +43,8 @@
 
         <ion-col size="10">
           <div class="ion-text-right">
-            <ion-button *ngFor="let page of pages" [fill]="page.fill" [routerLink]="page.name" routerDirection="root"
-              routerLinkActive="active-link" class="link navButton">
+            <ion-button *ngFor="let page of menu.pages" [fill]="page.fill" [routerLink]="page.link"
+              routerDirection="root" routerLinkActive="active-link" class="link navButton">
               {{page.name}}
             </ion-button>
 

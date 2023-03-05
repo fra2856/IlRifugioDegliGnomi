@@ -3,17 +3,24 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { HomePage } from './home.page';
 
-import { HomePageRoutingModule } from './home-routing.module';
-import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
-import { AppModule } from 'src/app/app.module';
+import { ComponentsModule } from 'src/app/components/components.module';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: HomePage,
+  }
+];
 
 
 @NgModule({
   imports: [
     CommonModule,
     IonicModule,
-    HomePageRoutingModule,
+    ComponentsModule,
+    RouterModule.forChild(routes),
   ],
-  declarations: [HomePage, NavbarComponent]
+  declarations: [HomePage]
 })
 export class HomePageModule { }

@@ -2,18 +2,24 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 
-import { ReservationsPageRoutingModule } from './reservations-routing.module';
-import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
-import { AppModule } from 'src/app/app.module';
 import { ReservationsPage } from './reservations.page';
+import { ComponentsModule } from 'src/app/components/components.module';
+import { Routes, RouterModule } from '@angular/router';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: ReservationsPage,
+  }
+];
 
 @NgModule({
   imports: [
     CommonModule,
     IonicModule,
-    ReservationsPageRoutingModule,
+    ComponentsModule,
+    RouterModule.forChild(routes),
   ],
-  declarations: [ReservationsPage, NavbarComponent]
+  declarations: [ReservationsPage]
 })
 export class ReservationsPageModule { }
