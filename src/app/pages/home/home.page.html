@@ -1,22 +1,23 @@
 <!-- <div #parallax class="parallax-image" [style.transform]="'translateY('+moveImage+'px)'"></div> -->
 
-
 <app-navbar [opacity]="opacityVal"></app-navbar>
-
 
 <ion-content [fullscreen]="true" class="image" [scrollEvents]="true" (ionScroll)="onScroll($event)">
 
   <ion-grid>
-    <ion-row id="home">
+    <ion-row class="section">
       <ion-col size="12" class="center">
 
-        <ion-text id="title1">
-          La Corteccia <br>
-          del Faggio
-        </ion-text>
+        <ion-card class="home-card">
+          <ion-card-header>
+            <ion-card-title class="title"> La Corteccia del Faggio</ion-card-title>
+            <ion-card-subtitle>La tua villaggiatura salcazzi</ion-card-subtitle>
+          </ion-card-header>
 
+        </ion-card>
 
       </ion-col>
+
     </ion-row>
 
     <ion-row id="where">

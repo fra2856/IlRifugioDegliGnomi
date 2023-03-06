@@ -1,33 +1,7 @@
 <ion-header [style.opacity]="opacity" mode="ios" class="ion-no-border">
-  <!-- <ion-toolbar>
-    <ion-buttons *ngIf="!platform.is('desktop')" slot="start">
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-    </ion-buttons>
-
-
-    <ion-grid *ngIf="platform.is('desktop')">
-      <ion-row>
-
-        <ion-col>
-          <ion-img src="/assets/icon/logo-white.svg" style=" height: 100px; fill:white">
-          </ion-img>
-        </ion-col>
-
-        <ion-col size="2" *ngFor="let page of pages" class="center">
-
-          <ion-text class="navbar" (click)="page.action()">
-            {{ page.name }}
-          </ion-text>
-        </ion-col>
-
-      </ion-row>
-    </ion-grid>
-
-  </ion-toolbar> -->
 
   <ion-toolbar>
+
     <ion-buttons *ngIf="!platform.is('desktop')" slot="start">
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
