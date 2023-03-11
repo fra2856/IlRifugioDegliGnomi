@@ -76,12 +76,19 @@
   --ion-color-light-tint: #f5f6f9;
 
   //colore arancione homemade
-  --ion-color-orange: #DC7202;
-  --ion-color-orange-rgb: 220, 114, 2;
+  // --ion-color-orange: #DC7202;
+  // --ion-color-orange-rgb: 220, 114, 2;
+  // --ion-color-orange-contrast: #000000;
+  // --ion-color-orange-contrast-rgb: 0, 0, 0;
+  // --ion-color-orange-shade: #c26402;
+  // --ion-color-orange-tint: #e0801b;
+
+  --ion-color-orange: #ff8800;
+  --ion-color-orange-rgb: 255, 136, 0;
   --ion-color-orange-contrast: #000000;
   --ion-color-orange-contrast-rgb: 0, 0, 0;
-  --ion-color-orange-shade: #c26402;
-  --ion-color-orange-tint: #e0801b;
+  --ion-color-orange-shade: #e07800;
+  --ion-color-orange-tint: #ff941a;
 
   //colore arancione chiaro homemade
   --ion-color-orange-light: #FFB258;

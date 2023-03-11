@@ -1,13 +1,26 @@
 <!-- <div #parallax class="parallax-image" [style.transform]="'translateY('+moveImage+'px)'"></div> -->
-
+<div class="background-image"></div>
 <app-navbar [opacity]="opacityVal"></app-navbar>
 
-<ion-content [fullscreen]="true" class="image" [scrollEvents]="true" (ionScroll)="onScroll($event)">
+<ion-content [fullscreen]="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
 
   <ion-grid>
-    <ion-row class="section">
+    <ion-row class="section home">
       <ion-col size="12" class="center">
-        <img *ngIf="!platform.is('desktop')" src="/assets/icon/logo-white.svg" style="max-width: 80vw;" />
+
+        <ion-grid style="height: auto;" *ngIf="!platform.is('desktop')">
+          <ion-row>
+            <ion-col>
+              <img src="/assets/icon/logo-white.svg" style="max-width: 80vw;" />
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-card-subtitle class="home-subtitle">La tua villaggiatura salcazzi</ion-card-subtitle>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
         <ion-card *ngIf="platform.is('desktop')" class="home-card">
           <ion-card-header>
@@ -21,7 +34,7 @@
 
     </ion-row>
 
-    <ion-row id="where">
+    <ion-row class="section where">
       <ion-col size="1"> </ion-col>
 
       <ion-col size="10">
@@ -36,26 +49,29 @@
               <ion-grid>
                 <ion-row style="height: 15%;">
                   <ion-col size="12">
-                    <ion-text id="title2">Lorem Ipsum</ion-text>
 
-                    <br>
-                    <br>
+                    <ion-card class="second-card">
+                      <ion-card-header>
+                        <ion-card-title color="dark">Lorem Ipsum</ion-card-title>
+                      </ion-card-header>
 
-                    <ion-text id="text2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                      Excepteur sint occaecat cupidatat non proident
-                    </ion-text>
+                      <ion-card-content>
+                        <ion-text>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                          Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                          Excepteur sint occaecat cupidatat non proident
+                        </ion-text>
 
-                    <br>
-                    <br>
+                        <ion-button fill="outline" shape="round" color="dark">
+                          Prenota ora!
+                        </ion-button>
+                      </ion-card-content>
+                    </ion-card>
 
-                    <ion-button fill="outline" shape="round" color="green-dark" style="margin: 0;">
-                      Prenota ora!
-                    </ion-button>
+
                   </ion-col>
                 </ion-row>
               </ion-grid>
@@ -74,7 +90,7 @@
 
     </ion-row>
 
-    <ion-row id="services">
+    <ion-row class="section services">
       <ion-col size="1"> </ion-col>
 
       <ion-col size="10">
@@ -86,32 +102,24 @@
 
             <ion-col size="5">
 
-              <ion-grid>
-                <ion-row style="height: 15%;">
-                  <ion-col size="12">
-                    <ion-text id="title3">Lorem Ipsum</ion-text>
+              <ion-card class="third-card">
+                <ion-card-header>
+                  <ion-card-title color="light">Lorem Ipsum</ion-card-title>
+                </ion-card-header>
 
-                    <br>
-                    <br>
+                <ion-card-content>
+                  <ion-text>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident
+                  </ion-text>
 
-                    <ion-text id="text3">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                      <br><br>
-                      Excepteur sint occaecat cupidatat non proident laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                      Excepteur sint occaecat cupidatat non proident
-                    </ion-text>
-                    <br>
-                    <br>
 
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
+                </ion-card-content>
+              </ion-card>
 
 
 
@@ -119,7 +127,16 @@
 
             <ion-col size="1"></ion-col>
 
-            <ion-col size="6" id="foto-services"></ion-col>
+            <ion-col size="6">
+              <swiper #swiper [config]="config">
+                <ng-template swiperSlide
+                  *ngFor="let foto of ['autunno-2.jpg', 'autunno-finale.jpg', 'croce.jpg', 'inverno.jpg']">
+                  <img [src]="'assets/images/' + foto" class="foto">
+                </ng-template>
+
+
+              </swiper>
+            </ion-col>
           </ion-row>
           <ion-row style="height: 15%;"> </ion-row>
 

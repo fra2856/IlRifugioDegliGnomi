@@ -25,6 +25,14 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+@import 'swiper/scss';
+@import '@ionic/angular/css/ionic-swiper';
+@import 'swiper/scss';
+@import 'swiper/scss/autoplay';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+
 @font-face {
     font-family: 'Rock Salt'; //This is what we are going to call
     src: url('/assets/fonts/RockSalt-Regular.ttf');
@@ -42,6 +50,8 @@
     --ion-color-contrast-rgb: var(--ion-color-orange-contrast-rgb);
     --ion-color-shade: var(--ion-color-orange-shade);
     --ion-color-tint: var(--ion-color-orange-tint);
+
+
 }
 
 .ion-color-orange-light {
@@ -69,6 +79,15 @@
     text-align: center;
 }
 
+.background-image {
+    background: url(/assets/images/autunno-finale.jpg) no-repeat;
+    background-size: cover;
+    background-position: 10% bottom;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
 // ion-grid {
 //     border: 1px solid red
 // }
@@ -77,6 +96,6 @@
 //     border: 1px solid green
 // }
 
-ion-col {
-    border: 1px solid blue
-}
+// ion-col {
+//     border: 1px solid blue
+// }

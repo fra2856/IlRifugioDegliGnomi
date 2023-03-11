@@ -6,13 +6,12 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    // RouterModule,
+
     IonicModule.forRoot({
       platform: {
         /** The default `desktop` function returns false for devices with a touchscreen.

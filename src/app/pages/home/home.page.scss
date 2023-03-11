@@ -3,56 +3,39 @@ ion-grid {
     height: 100%;
 }
 
-ion-row {
-
-    // border: 1px solid green;
-}
-
 ion-col {
-    // border: 1px solid blue;
     padding: 0;
     height: 100%;
 }
+
+ion-content {
+    --background: transparent;
+}
+
+.foto {
+    height: 100%;
+}
+
+.section {
+    height: 100vh;
+}
+
 
 
 /*----------------------------------------------------------------
     SECTION 1
 ----------------------------------------------------------------*/
 
-.image {
-    --background: url(/assets/images/autunno-finale.jpg) 0 0/100% 100% no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
+.home {
+    height: 100% !important;
 }
 
-.parallax-image {
-    position: absolute;
-    border: 2px solid red;
-    --background: url(/assets/images/autunno-finale.jpg);
-    background: url(/assets/images/autunno-finale.jpg);
-    height: 100%;
-    width: 100%;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    // overflow: hidden;
-    // transform: translateY(100px);
-}
-
-.section {
-    height: 100%;
-}
-
-ion-card {
+.home-card {
     --background: transparent;
     --color: var(--ion-color-light);
     padding: 4vw;
-    border-radius: 10px;
     border: 2px solid var(--ion-color-light);
+    border-radius: 10px;
 
     ion-card-title {
         color: var(--ion-color-light);
@@ -64,18 +47,40 @@ ion-card {
         color: var(--ion-color-light);
         font-family: 'Quando';
         font-size: 2vw;
-        padding-top: 2vw;
+        padding-top: 2vh;
     }
 }
+
+.home-subtitle {
+    color: var(--ion-color-light);
+    font-family: 'Quando';
+    font-size: small;
+    padding-top: 2vh;
+}
+
 
 
 /*----------------------------------------------------------------
     SECTION 2
 ----------------------------------------------------------------*/
 
-#where {
-    height: 100%;
+.where {
     background-color: var(--ion-color-light);
+}
+
+.second-card {
+    --background: transparent;
+    --color: var(--ion-color-dark);
+    border: 2px solid var(--ion-color-dark);
+    border-radius: 10px;
+
+    margin: 0;
+
+    .ion-card-title {
+        color: var(--ion-color-dark);
+        font-family: 'Rock Salt';
+        font-size: 4vw;
+    }
 }
 
 #foto-where {
@@ -84,28 +89,29 @@ ion-card {
     background-size: cover;
 }
 
-#title2 {
-    font-family: 'Quando';
-    font-weight: 300;
-    font-size: 200%;
 
-    color: var(--ion-color-orange);
-}
-
-#text2 {
-    font-family: 'Quando';
-    font-size: 80%;
-
-    color: var(--ion-color-orange-light);
-}
 
 /*----------------------------------------------------------------
     SECTION 3
 ----------------------------------------------------------------*/
 
-#services {
-    height: 100%;
+.services {
     background-color: var(--ion-color-orange);
+}
+
+.third-card {
+    --background: transparent;
+    --color: var(--ion-color-light);
+    border: 2px solid var(--ion-color-light);
+    border-radius: 10px;
+
+    margin: 0;
+
+    .ion-card-title {
+        color: var(--ion-color-light);
+        font-family: 'Rock Salt';
+        font-size: 4vw;
+    }
 }
 
 #foto-services {
@@ -113,25 +119,3 @@ ion-card {
     background: url(/assets/images/croce.jpg);
     background-size: cover;
 }
-
-#title3 {
-    font-family: 'Quando';
-    font-weight: 300;
-    font-size: 200%;
-
-
-    color: var(--ion-color-light);
-}
-
-#text3 {
-    font-family: 'Quando';
-    font-size: 80%;
-
-    color: var(--ion-color-light);
-}
-
-// ion-content ion-header {
-//     position: initial;
-//     --background: transparent;
-//     background: transparent;
-// }

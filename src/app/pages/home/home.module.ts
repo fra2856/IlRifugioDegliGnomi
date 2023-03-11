@@ -5,6 +5,7 @@ import { HomePage } from './home.page';
 
 import { ComponentsModule } from 'src/app/components/components.module';
 import { Routes, RouterModule } from '@angular/router';
+import { SwiperModule } from 'swiper/angular';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
     CommonModule,
     IonicModule,
     ComponentsModule,
+    SwiperModule,
     RouterModule.forChild(routes),
   ],
   declarations: [HomePage]
