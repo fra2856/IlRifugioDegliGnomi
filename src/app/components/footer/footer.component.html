@@ -1,0 +1,36 @@
+<ion-footer [style.opacity]="opacity" mode="ios" class="ion-no-border">
+
+  <ion-toolbar>
+
+    <ion-grid fixed>
+      <ion-row class="ion-justify-content-evenly">
+
+        <ion-col>
+          <ion-text color="dark">
+            lacortecciadelfaggio@gmail.com
+          </ion-text>
+        </ion-col>
+
+        <ion-col>
+          <ion-text color="dark">
+            lacortecciadelfaggio@gmail.com
+          </ion-text>
+        </ion-col>
+
+        <ion-col>
+          <ion-text color="dark">
+            Tel. 0577579306
+          </ion-text>
+        </ion-col>
+
+        <ion-col>
+          <ion-icon [name]="icon.name" *ngFor="let icon of icons" [routerLink]="icon.link" routerDirection="root"
+            routerLinkActive="active-link" class="link navButton">
+          </ion-icon>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-footer>

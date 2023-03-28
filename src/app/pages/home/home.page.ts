@@ -18,11 +18,12 @@ export class HomePage {
       delay: 3000
     },
     speed: 1000,
-    navigation: true,
+    // navigation: true,
 
     loop: true
   }
-  public opacityVal: number = 1;
+  public headerOpacity: number = 1;
+  public footerOpacity: number = 0;
 
   constructor(public platform: Platform) { }
 
@@ -36,8 +37,14 @@ export class HomePage {
 
     // this.domCtrl.write(() => {
     if (scrollTop >= 0) {
-      this.opacityVal = 1 - scrollTop / 200;
+      this.headerOpacity = 1 - scrollTop / 200;
     }
+
+    if (scrollTop > 0) {
+      this.footerOpacity = 1 - 1 / scrollTop;
+    }
+
+    console.log($event.detail, scrollTop);
     // console.log("scroll", scrollTop, this.opacityVal);
     // this.render.setStyle(this.image.nativeElement, 'transform', `translateY(${this.moveImage}px)`)
     // })

@@ -1,28 +1,14 @@
 <!-- <div #parallax class="parallax-image" [style.transform]="'translateY('+moveImage+'px)'"></div> -->
 <div class="background-image"></div>
-<app-navbar [opacity]="opacityVal"></app-navbar>
+<app-navbar [opacity]="headerOpacity"></app-navbar>
 
 <ion-content [fullscreen]="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
 
-  <ion-grid>
+  <ion-grid *ngIf="platform.is('desktop')">
     <ion-row class="section home">
       <ion-col size="12" class="center">
 
-        <ion-grid style="height: auto;" *ngIf="!platform.is('desktop')">
-          <ion-row>
-            <ion-col>
-              <img src="/assets/icon/logo-white.svg" style="max-width: 80vw;" />
-            </ion-col>
-          </ion-row>
-
-          <ion-row>
-            <ion-col>
-              <ion-card-subtitle class="home-subtitle">La tua villaggiatura salcazzi</ion-card-subtitle>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-
-        <ion-card *ngIf="platform.is('desktop')" class="home-card">
+        <ion-card class="home-card">
           <ion-card-header>
             <ion-card-title class="title"> La Corteccia del Faggio</ion-card-title>
             <ion-card-subtitle>La tua villaggiatura salcazzi</ion-card-subtitle>
@@ -60,12 +46,12 @@
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                           Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                          Excepteur sint occaecat cupidatat non proident
+                          laboris nisi ut aliquip ex ea commodo consequat.
                         </ion-text>
 
-                        <ion-button fill="outline" shape="round" color="dark">
+                        <br>
+
+                        <ion-button fill="outline" shape="round" color="orange">
                           Prenota ora!
                         </ion-button>
                       </ion-card-content>
@@ -89,6 +75,8 @@
       <ion-col size="1"> </ion-col>
 
     </ion-row>
+
+
 
     <ion-row class="section services">
       <ion-col size="1"> </ion-col>
@@ -117,6 +105,11 @@
                     Excepteur sint occaecat cupidatat non proident
                   </ion-text>
 
+                  <br>
+
+                  <ion-button fill="outline" shape="round" color="light">
+                    Prenota ora!
+                  </ion-button>
 
                 </ion-card-content>
               </ion-card>
@@ -129,8 +122,7 @@
 
             <ion-col size="6">
               <swiper #swiper [config]="config">
-                <ng-template swiperSlide
-                  *ngFor="let foto of ['autunno-2.jpg', 'autunno-finale.jpg', 'croce.jpg', 'inverno.jpg']">
+                <ng-template swiperSlide *ngFor="let foto of ['autunno-2.jpg', 'autunno-finale.jpg', 'inverno.jpg']">
                   <img [src]="'assets/images/' + foto" class="foto">
                 </ng-template>
 
@@ -151,4 +143,97 @@
 
   </ion-grid>
 
+
+
+  <!-- -----------------------------------
+              SE MOBILE
+----------------------------------- -->
+
+
+
+
+  <ion-grid *ngIf="!platform.is('desktop')">
+    <ion-row class="section home">
+      <ion-col size="12" class="center">
+
+        <ion-grid style="height: auto;">
+          <ion-row>
+            <ion-col>
+              <img src="/assets/icon/logo-white.svg" style="max-width: 80vw;" />
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-card-subtitle class="home-subtitle">La tua villaggiatura salcazzi</ion-card-subtitle>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ion-col>
+
+    </ion-row>
+
+
+    <ion-row class="section where ion-justify-content-center">
+
+      <ion-col sizeSm="8" sizeXs="10" style="display: flex;" class="ion-align-items-center">
+
+        <ion-card style="height: 80%;">
+          <ion-img src="assets/images/autunno-2.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-title color="dark">Lorem Ipsum</ion-card-title>
+            <ion-card-subtitle color="dark">Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
+            </ion-text>
+
+            <ion-button fill="outline" shape="round" color="orange">
+              Prenota ora!
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="section services ion-justify-content-center">
+
+      <ion-col sizeSm="8" sizeXs="10" style="display: flex;" class="ion-align-items-center">
+
+        <ion-card style="height: 80%;">
+          <ion-img src="assets/images/inverno.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-title color="dark">Lorem Ipsum</ion-card-title>
+            <ion-card-subtitle color="dark">Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
+            </ion-text>
+
+            <br>
+
+            <ion-button fill="outline" shape="round" color="orange">
+              Prenota ora!
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 </ion-content>
+
+<app-footer [opacity]="footerOpacity"></app-footer>

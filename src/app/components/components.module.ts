@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MenuService } from '../app-services/menu.service';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   providers: [MenuService],
-  declarations: [NavbarComponent],
-  exports: [NavbarComponent]
+  declarations: [NavbarComponent, FooterComponent],
+  exports: [NavbarComponent, FooterComponent]
 })
 export class ComponentsModule { }
